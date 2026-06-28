@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — G. Birdsell Harris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #111; color: #e8e4de; min-height: 100vh; }
+  a { text-decoration: none; color: inherit; }
+  .site-header { border-bottom: 1px solid #2a2a2a; padding: 0 2rem; }
+  .header-top { padding: 1.25rem 0 0; }
+  .site-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; letter-spacing: 0.02em; color: #f0ece4; }
+  .site-title a:hover { color: #c8a97e; }
+  .site-subtitle { font-size: 0.7rem; font-weight: 300; color: #888; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+  .progress-section { padding: 0.75rem 0 1rem; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 0.68rem; color: #666; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .progress-label span:last-child { color: #c8a97e; }
+  .progress-track { height: 2px; background: #2a2a2a; border-radius: 1px; }
+  .progress-fill { height: 2px; background: #c8a97e; border-radius: 1px; }
+  .site-nav { border-top: 1px solid #1e1e1e; padding: 0.6rem 0; }
+  .site-nav ul { list-style: none; display: flex; gap: 1.75rem; }
+  .site-nav a { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: #888; transition: color 0.2s; }
+  .site-nav a:hover { color: #e8e4de; }
+  .main-content { max-width: 740px; margin: 0 auto; padding: 2.5rem 2rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #666; margin-bottom: 3rem; transition: color 0.2s; }
+  .back-link:hover { color: #c8a97e; }
+  .construction { text-align: center; padding: 4rem 0; }
+  .construction-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 400; color: #f0ece4; margin-bottom: 1rem; }
+  .construction-text { font-size: 0.88rem; line-height: 1.75; color: #666; }
+  .site-footer { border-top: 1px solid #1e1e1e; padding: 2rem; text-align: center; margin-top: 4rem; }
+  .site-footer p { font-size: 0.68rem; color: #444; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div class="site-title"><a href="/">300 Days to London</a></div>
+    <div class="site-subtitle">A monochrome journal — Ricoh GR IV · G. Birdsell Harris</div>
+  </div>
+  <div class="progress-section">
+    <div class="progress-label">
+      <span>June 19, 2026</span>
+      <span id="progress-text">Loading...</span>
+      <span>April 25, 2027</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Journal</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/archive">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+  <a class="back-link" href="/">← Back to journal</a>
+  <div class="construction">
+    <h1 class="construction-title">Archive.</h1>
+    <p class="construction-text">This page is under construction. Check back shortly.</p>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>300 Days to London · G. Birdsell Harris · Ricoh GR IV Monochrome · June 2026 – April 2027</p>
+</footer>
+<script>
+  const start = new Date('2026-06-19');
+  const end = new Date('2027-04-25');
+  const today = new Date();
+  const dayNum = Math.max(1, Math.round((today - start) / 86400000) + 1);
+  const total = Math.round((end - start) / 86400000);
+  const pct = Math.min(100, Math.round((dayNum / total) * 100));
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = 'Day ' + dayNum + ' of ' + total + ' — ' + (total - dayNum) + ' days remaining';
+</script>
+</body>
+</html>
