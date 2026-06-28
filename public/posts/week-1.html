@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What the Preset Teaches You — G. Birdsell Harris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body { font-family: 'Inter', sans-serif; background: #111; color: #e8e4de; min-height: 100vh; }
+  a { text-decoration: none; color: inherit; }
+  .site-header { border-bottom: 1px solid #2a2a2a; padding: 0 2rem; }
+  .header-top { padding: 1.25rem 0 0; }
+  .site-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; letter-spacing: 0.02em; color: #f0ece4; }
+  .site-title a:hover { color: #c8a97e; }
+  .site-subtitle { font-size: 0.7rem; font-weight: 300; color: #888; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+  .progress-section { padding: 0.75rem 0 1rem; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 0.68rem; color: #666; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .progress-label span:last-child { color: #c8a97e; }
+  .progress-track { height: 2px; background: #2a2a2a; border-radius: 1px; }
+  .progress-fill { height: 2px; background: #c8a97e; border-radius: 1px; }
+  .site-nav { border-top: 1px solid #1e1e1e; padding: 0.6rem 0; }
+  .site-nav ul { list-style: none; display: flex; gap: 1.75rem; }
+  .site-nav a { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: #888; transition: color 0.2s; }
+  .site-nav a:hover { color: #e8e4de; }
+  .main-content { max-width: 740px; margin: 0 auto; padding: 2.5rem 2rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #666; margin-bottom: 2rem; transition: color 0.2s; }
+  .back-link:hover { color: #c8a97e; }
+  .post-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .post-tag { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #c8a97e; }
+  .post-tag + .post-tag::before { content: '·'; color: #444; margin-right: 0.75rem; }
+  .post-date { font-size: 0.68rem; color: #555; letter-spacing: 0.06em; margin-left: auto; }
+  .post-week { font-size: 0.62rem; color: #444; letter-spacing: 0.1em; text-transform: uppercase; }
+  .post-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; line-height: 1.25; color: #f0ece4; margin-bottom: 0.5rem; }
+  .post-deck { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: #888; line-height: 1.5; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #1e1e1e; }
+  .hero { width: 100%; aspect-ratio: 16/7; background: #1a1a1a; margin-bottom: 0.75rem; overflow: hidden; }
+  .hero img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); display: block; }
+  .hero-caption { font-size: 0.67rem; color: #555; letter-spacing: 0.06em; margin-bottom: 2rem; font-style: italic; }
+  .post-body { font-size: 0.93rem; line-height: 1.85; color: #b0aa9e; }
+  .post-body p { margin-bottom: 1.4rem; }
+  .post-body h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; color: #e8e4de; margin: 2rem 0 0.75rem; }
+  .inline-img { width: 100%; aspect-ratio: 3/2; background: #1a1a1a; margin: 1.75rem 0 0.5rem; overflow: hidden; }
+  .inline-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); display: block; }
+  .img-caption { font-size: 0.67rem; color: #555; font-style: italic; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+  .exif { font-family: monospace; font-size: 0.67rem; color: #444; letter-spacing: 0.06em; border-left: 2px solid #2a2a2a; padding-left: 0.75rem; margin-bottom: 1.75rem; }
+  .site-footer { border-top: 1px solid #1e1e1e; padding: 2rem; text-align: center; margin-top: 4rem; }
+  .site-footer p { font-size: 0.68rem; color: #444; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div class="site-title"><a href="/">300 Days to London</a></div>
+    <div class="site-subtitle">A monochrome journal — Ricoh GR IV · G. Birdsell Harris</div>
+  </div>
+  <div class="progress-section">
+    <div class="progress-label">
+      <span>June 19, 2026</span>
+      <span id="progress-text">Loading...</span>
+      <span>April 25, 2027</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Journal</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/archive">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+  <a class="back-link" href="/">← Back to journal</a>
+  <div class="post-meta">
+    <span class="post-tag">Hard Shadows</span>
+    <span class="post-tag">Week 1</span>
+    <span class="post-week">Day 9</span>
+    <span class="post-date">June 27, 2026</span>
+  </div>
+  <h1 class="post-title">What the Preset Teaches You Before You Even Lift the Camera</h1>
+  <p class="post-deck">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  <div class="hero">
+    <img src="/images/week1-hero.jpg" alt="Hard shadows on pavement, Farmington Michigan">
+  </div>
+  <p class="hero-caption">Farmington, Michigan. June 23, 2026. GR IV Monochrome · f/8 · 1/250 · ISO 400</p>
+
+  <div class="post-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+
+    <h2>Lorem ipsum dolor sit amet</h2>
+
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. Similique sunt in culpa qui officia deserunt mollitia animi.</p>
+
+    <div class="inline-img">
+      <img src="/images/week1-shadows.jpg" alt="Shadow geometry on concrete, Farmington">
+    </div>
+    <p class="img-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="exif">GR IV · f/8 · 1/500 · ISO 200 · Snap 2m · GR Mono Hi</p>
+
+    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.</p>
+
+    <h2>Ut enim ad minima veniam</h2>
+
+    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.</p>
+
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.</p>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>300 Days to London · G. Birdsell Harris · Ricoh GR IV Monochrome · June 2026 – April 2027</p>
+</footer>
+<script>
+  const start = new Date('2026-06-19');
+  const end = new Date('2027-04-25');
+  const today = new Date();
+  const dayNum = Math.max(1, Math.round((today - start) / 86400000) + 1);
+  const total = Math.round((end - start) / 86400000);
+  const pct = Math.min(100, Math.round((dayNum / total) * 100));
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = 'Day ' + dayNum + ' of ' + total + ' — ' + (total - dayNum) + ' days remaining';
+</script>
+</body>
+</html>
