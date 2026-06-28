@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>300 Days to London — G. Birdsell Harris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body { font-family: 'Inter', sans-serif; background: #111; color: #e8e4de; min-height: 100vh; }
+  a { text-decoration: none; color: inherit; cursor: pointer; }
+  .site-header { border-bottom: 1px solid #2a2a2a; padding: 0 2rem; }
+  .header-top { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0 0; }
+  .site-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; letter-spacing: 0.02em; color: #f0ece4; cursor: pointer; }
+  .site-subtitle { font-size: 0.7rem; font-weight: 300; color: #888; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+  .progress-section { padding: 0.75rem 0 1rem; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 0.68rem; color: #666; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .progress-label span:last-child { color: #c8a97e; }
+  .progress-track { height: 2px; background: #2a2a2a; border-radius: 1px; }
+  .progress-fill { height: 2px; background: #c8a97e; border-radius: 1px; }
+  .site-nav { border-top: 1px solid #1e1e1e; padding: 0.6rem 0; }
+  .site-nav ul { list-style: none; display: flex; gap: 1.75rem; }
+  .site-nav a { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: #888; transition: color 0.2s; }
+  .site-nav a:hover { color: #e8e4de; }
+  .main-content { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+  .post-card { border-bottom: 1px solid #1e1e1e; padding-bottom: 2.5rem; margin-bottom: 2.5rem; }
+  .post-card:last-child { border-bottom: none; }
+  .post-thumb { width: 100%; aspect-ratio: 16/7; background: #1a1a1a; margin-bottom: 1rem; overflow: hidden; }
+  .post-thumb img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); display: block; }
+  .post-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+  .post-tag { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #c8a97e; }
+  .post-tag + .post-tag::before { content: '·'; color: #444; margin-right: 0.75rem; }
+  .post-date { font-size: 0.68rem; color: #555; letter-spacing: 0.06em; margin-left: auto; }
+  .post-week { font-size: 0.62rem; color: #444; letter-spacing: 0.1em; text-transform: uppercase; }
+  .post-title { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 400; line-height: 1.3; color: #f0ece4; margin-bottom: 0.75rem; }
+  .post-title a:hover { color: #c8a97e; }
+  .post-excerpt { font-size: 0.88rem; line-height: 1.75; color: #999; margin-bottom: 1rem; }
+  .read-more { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #c8a97e; display: inline-flex; align-items: center; gap: 6px; }
+  .read-more:hover { gap: 10px; }
+  .site-footer { border-top: 1px solid #1e1e1e; padding: 2rem; text-align: center; }
+  .site-footer p { font-size: 0.68rem; color: #444; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div>
+      <div class="site-title">300 Days to London</div>
+      <div class="site-subtitle">A monochrome journal — Ricoh GR IV · G. Birdsell Harris</div>
+    </div>
+  </div>
+  <div class="progress-section">
+    <div class="progress-label">
+      <span>June 19, 2026</span>
+      <span id="progress-text">Loading...</span>
+      <span>April 25, 2027</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Journal</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/archive">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+  <article class="post-card">
+    <div class="post-thumb">
+      <img src="/images/week1-hero.jpg" alt="Hard shadows on pavement, Farmington Michigan">
+    </div>
+    <div class="post-meta">
+      <span class="post-tag">Hard Shadows</span>
+      <span class="post-tag">Week 1</span>
+      <span class="post-week">Day 9</span>
+      <span class="post-date">June 27, 2026</span>
+    </div>
+    <h2 class="post-title"><a href="/posts/week-1">What the Preset Teaches You Before You Even Lift the Camera</a></h2>
+    <p class="post-excerpt">Seven days into Hard Shadows and I haven't taken a single shot I'm proud of. That's not a crisis — that's the point. This week I want to write about what's been happening before the shutter fires: the discipline of the preset, the strange freedom of Snap Focus at 2 meters, and what it means to commit to f/8 when every instinct says open up.</p>
+    <a class="read-more" href="/posts/week-1">Continue reading <span>→</span></a>
+  </article>
+  <article class="post-card">
+    <div class="post-thumb">
+      <img src="/images/day1-hero.jpg" alt="First day, Farmington Michigan">
+    </div>
+    <div class="post-meta">
+      <span class="post-tag">Hard Shadows</span>
+      <span class="post-tag">Week 0</span>
+      <span class="post-week">Day 1</span>
+      <span class="post-date">June 19, 2026</span>
+    </div>
+    <h2 class="post-title"><a href="/posts/day-1">Day One: Why 300 Days, Why London, Why This Camera</a></h2>
+    <p class="post-excerpt">On June 19 I started a 300-day curriculum that ends at a Paul Reid monochrome workshop in London. Here is what I'm attempting, what gear I'm using, and why I think structured practice with a single fixed camera is the only honest way to get better at this.</p>
+    <a class="read-more" href="/posts/day-1">Continue reading <span>→</span></a>
+  </article>
+</main>
+<footer class="site-footer">
+  <p>300 Days to London · G. Birdsell Harris · Ricoh GR IV Monochrome · June 2026 – April 2027</p>
+</footer>
+<script>
+  const start = new Date('2026-06-19');
+  const end = new Date('2027-04-25');
+  const today = new Date();
+  const dayNum = Math.max(1, Math.round((today - start) / 86400000) + 1);
+  const total = Math.round((end - start) / 86400000);
+  const pct = Math.min(100, Math.round((dayNum / total) * 100));
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = 'Day ' + dayNum + ' of ' + total + ' — ' + (total - dayNum) + ' days remaining';
+</script>
+</body>
+</html>
